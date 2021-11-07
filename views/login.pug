@@ -1,0 +1,23 @@
+extends base.pug
+
+block head
+    link(rel="stylesheet", href="css/signin.css")
+
+block title
+    title Log In
+
+block container
+    main.form-signin
+        form.text-center(action="/login" method="post")
+            img(src="img/bootstrap-logo.svg" alt="" width="72" height="57")
+            h1.h3.mb-3.fw-normal Please sign in
+
+            .form-floating
+                input#floatingInput.form-control(type='text' placeholder='Username' name="username" required="required")
+                label(for='floatingInput') Username
+            .form-floating
+                input#floatingPassword.form-control(type='password' placeholder='Password' name="password" required="required")
+                label(for='floatingPassword') Password
+            
+            button.w-100.btn.btn-lg.btn-primary(type="submit") Sign in
+            a.w-100.btn.btn-lg.btn-success.mt-1(href="/register") Register

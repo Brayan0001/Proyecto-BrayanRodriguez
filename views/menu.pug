@@ -1,0 +1,15 @@
+extends base.pug
+
+block head
+    link(rel="stylesheet", href="css/signin.css")
+
+block title
+    title Menú
+
+block container
+    main.form-signin
+        form.text-center
+            h1.h3.mb-3.fw-normal Menú
+            
+            a.w-100.btn.btn-lg.btn-primary(href="/departamento") Departamentos
+            a.w-100.btn.btn-lg.btn-primary.mt-1(href="/empleado") Empleados

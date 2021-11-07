@@ -1,0 +1,4 @@
+node_modules/
+
+# Este archivo debería ir ignorado
+#.env

@@ -1,0 +1,28 @@
+extends base.pug
+
+block title
+    title Register
+
+block container
+    .container.mt-5(style={width:'350px'})
+        h1 User registration
+        hr
+        form(action="/register" method="post")
+            .form-group
+                label(for="fullname") Fullname
+                input#fullname.form-control(type="text" name="fullname")
+            
+            .form-group.mt-3
+                label(for="username") Username
+                input#username.form-control(type="text" name="username")
+            
+            .form-group.mt-3
+                label(for="password") Password
+                input#password.form-control(type="password" name="password")
+
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-primary Register
+
+                .d-grid.gap-2.mt-1
+                    a.btn.btn-success(href="/login") Log In

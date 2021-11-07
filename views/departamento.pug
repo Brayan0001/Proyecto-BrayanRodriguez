@@ -1,0 +1,42 @@
+extends base.pug
+
+block title
+    title Departamentos
+
+block container
+    .container.mt-5(style={width:'350px'})
+        h1 Departamentos
+        hr
+        form(action="" method="post")
+            .form-group
+                label(for="codigo") Código
+                input#fullname.form-control(type="number" name="codigo")
+            
+            .form-group.mt-3
+                label(for="nombre") Nombre
+                input#username.form-control(type="text" name="nombre")
+            
+            .form-group.mt-3
+                label(for="descripcion") Descripcion
+                input#password.form-control(type="text" name="descripcion")
+
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-primary.mt-1(formaction="/ingresarDEP") Ingresar
+                .d-grid.gap-2
+                    button.btn.btn-primary.mt-1(formaction="/modificarDEP") Modificar
+                .d-grid.gap-2
+                    button.btn.btn-primary.mt-1(formaction="/eliminarDEP") Eliminar
+                .d-grid.gap-2.mt-1
+                    a.btn.btn-success(href="/") Volver
+        .table.mt-3
+            table(border="1" cellpadding="7" cellspacing="7")
+                thead
+                    th.col Código
+                    th.col Nombre
+                    th.col Departamento
+                each item in data
+                    tr
+                        th(scope="row")= item.codigo
+                        td= item.nombre
+                        td= item.descripcion
